@@ -78,4 +78,8 @@
         padding-bottom: 112px;
     }
 
+    .text-content {
+        display:none;
+    }
+
 }
