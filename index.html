@@ -44,10 +44,27 @@
                 </div>
         </div>
     
-        <div id="slider">
-            <div class="text-content">
-                <h2 class="text-heading">New York</h2>
-                <div class="text-description">The atmosphere in New York is lorem ipsum.</div>
+        <div class="slider">
+            <div class="myslides">
+                <img src="./assets/img/slider/slider1.jpg" class="slider-img">
+                <div class="text-content">
+                <h2 class="text-heading">Los Angeles</h2>
+                <div class="text-description">We had the best time playing at Venice Beach!</div>
+                </div>
+            </div>
+            <div class="myslides">
+                <img src="./assets/img/slider/slider2.jpg" class="slider-img">
+                <div class="text-content">
+                    <h2 class="text-heading">New York</h2>
+                    <div class="text-description">The atmosphere in New York is lorem ipsum.</div>
+                </div>
+            </div>
+            <div class="myslides">
+                <img src="./assets/img/slider/slider3.jpg" class="slider-img">
+                <div class="text-content">
+                <h2 class="text-heading">Chicago</h2>
+                <div class="text-description">Thank you, Chicago - A night we won't forget.</div>
+                </div>
             </div>
         </div>
         <div id="content">
@@ -270,6 +287,25 @@
         modalContainer.addEventListener('click', function (event) {
             event.stopPropagation()
         })
+    </script>
+
+    <script>
+        var slideIndex = 0;
+        
+        showSlide();
+
+        function showSlide() {
+            var slides = document.getElementsByClassName("myslides");
+            for(var i = 0; i< slides.length; i++) {
+                slides[i].style.display='none';
+            }
+            slideIndex++;
+            if(slideIndex > slides.length) {slideIndex = 1}
+            slides[slideIndex-1].style.display='block';
+            setTimeout(showSlide, 5000);
+        }
+
+
     </script>
 
 </body>
